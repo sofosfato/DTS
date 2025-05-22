@@ -27,7 +27,7 @@ body{ /* body selecciona el cuerpo general y lo pinta */
 			footer {width: 900px;
 				margin: 0 auto;}
 
-		#contenedor{
+		.contenedor{
 			width: 900px; 
 			padding: 20px ;
 			margin: 0px;
@@ -35,7 +35,7 @@ body{ /* body selecciona el cuerpo general y lo pinta */
 			margin: 0 auto; /* centrar elementos dentro de este div */
 			float: center; 
 			display: flex;
-			align-items: center;
+			justify-content: center;
 		}
 	        #desarrollo{/* selecciona el id y lo pinta */
 			background: black;
@@ -84,8 +84,10 @@ body{ /* body selecciona el cuerpo general y lo pinta */
 <body>
 <div id="introduccion">
 	<header><h1>EXPANDED CINEMA AND RYOJI IKEDA</h1></header>
-	        <iframe width="795" height="472.5" src="https://www.youtube.com/embed/jCR7KJQtwGE?si=Ru5pQH1hCrg3glnk/?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-	
+	<div class="contenedor">        
+	<iframe width="795" height="472.5" src="https://www.youtube.com/embed/jCR7KJQtwGE?si=Ru5pQH1hCrg3glnk/?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+	</div>
+		
 		<h2>RYOJI IKEDA</h2> <hr color: white;>
 		<p>Artista visual y compositor japonés. Su trabajo se enfoca principalmente en las caracteristicas esenciales del sonido, la luz como elemento visual, fusionado con lo universal y trasparente de la matematica utilizado como estetica. Con estos elementos crea instalaciones inmersivas o actuaciones en directo.</p>
 
