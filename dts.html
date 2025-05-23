@@ -2,117 +2,133 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Expanded Cinema and Ryoji Ikeda</title>
+	<title>Expanded cinema and Ryoji Ikeda</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 <style>
-body {
-	background: black;
-	font-family: sans-serif;
-	margin: 20px;
-	padding: 0;
-}
 
-header {
-	font-size: 64px;
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	color: white;
-}
+ 
+body{ /* body selecciona el cuerpo general y lo pinta */
+			background: black; /* https://www.w3schools.com/colors/colors_names.asp */  
+			font-family: sans-serif; 
+	                margin: 200px;
+			}
 
-footer {
-	width: 900px;
-	margin: 0 auto;
-}
+			header{font-size: 64px;
+			       width: 100%;
+			       margin: 0 auto;/* centrar elementos dentro de este div */
+			       text-align: center;
+			 }
 
-.contenedor {
-	width: 900px;
-	padding: 20px;
-	background: black;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+			footer {width: 900px;
+				margin: 0 auto;}
 
-h1 {
-	width: 100%;
-	display: block;
-	margin: 0;
-	font-size: 35px;
-	text-align: center;
-	color: white;
-	font-family: 'Orbitron', cursive;
-}
+		.contenedor{
+			width: 900px; 
+			padding: 20px ;
+			margin: 0px;
+			background: black;
+			margin: 0 auto; /* centrar elementos dentro de este div */
+			float: center; 
+			display: flex;
+			justify-content: center;
+		        }
+	
+	        #desarrollo{/* selecciona el id y lo pinta */
+			background: black;
+			}
 
-h2 {
-	width: 80%;
-	font-size: 25px;
-	color: white;
-	font-family: 'Orbitron', cursive;
-	margin-top: 20px;
-}
+		h1{/* selecciona el header o titulo 1 y lo pinta */
+			width: 100%;
+			display: block;
+			padding: 0px;
+			margin: 0px 0px;
+			font-size: 35px;
+			text-align: center;
+			color: white;
+			font-family: 'Orbitron', cursive;
+                        }
+	
+		h2 {/* selecciona el header o titulo 3 y lo pinta */
+			width: 80%;
+			font-size: 25px;
+			color: white;
+			font-family: 'Orbitron', cursive;
+			}
+	
+		p {/* selecciona el parrafo y lo pinta */
+			background: black;
+			width: 100%;
+			padding: 10px;
+			margin-top: 20px;
+			font-size: 18px;
+			color: white;
+			font-family: 'Turret Road', cursive;
+			text-align:
+			float: left;
+			}
+	
+		#img{/* selecciona las imagenes y las formatea */
+			width: 300px; 
+			height: 250px;
+			margin-left: 50px;
+			float:right;
+			}
+                .contenedor{ 
+			displey: flex; 
+			margin-left: 50px;
+		
+               
 
-p {
-	background: black;
-	width: 100%;
-	padding: 10px;
-	margin-top: 20px;
-	font-size: 18px;
-	color: white;
-	font-family: 'Turret Road', cursive;
-	text-align: justify;
-}
 
-.imagen {
-	width: 300px;
-	height: 250px;
-	margin-left: 50px;
-	float: right;
-}
 </style>
+
 </head>
 
 <body>
 	<header><h1>EXPANDED CINEMA AND RYOJI IKEDA</h1></header>
-
-	<div class="contenedor">
-		<iframe width="795" height="472.5" src="https://www.youtube.com/embed/jCR7KJQtwGE?autoplay=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+	<div class="contenedor">        
+	<iframe width="795" height="472.5" src="https://www.youtube.com/embed/jCR7KJQtwGE?si=Ru5pQH1hCrg3glnk/?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+	</div>
+	
+		<h2>RYOJI IKEDA</h2> <hr color: white;>
+	<div class="contenedor"> 
+		<div>
+		<p>Artista visual y compositor japonés cuyo trabajo se centra en las características esenciales del sonida y la luz como elementos visuales. Su enfoque fusiona lo universal y transparente ded las matemáticas, utilizadas como estética, dando lugar a instalaciones inmersivas y actuaciones en directo. fusionado con lo universal y trasparente de la matematica utilizado como estetica.</p>
+		</div>
+	     <img class="imagen" src=ryoji-ikeda.jpg> 
 	</div>
 
-	<h2>RYOJI IKEDA</h2>
-	<hr color="white">
-	<div class="contenedor">
-		<p>Artista visual y compositor japonés cuyo trabajo se centra en las características esenciales del sonido y la luz como elementos visuales. Su enfoque fusiona lo universal y transparente de las matemáticas utilizadas como estética, creando instalaciones inmersivas y actuaciones en directo.</p>
-		<img class="imagen" src="ryoji-ikeda.jpg">
+		<h2>"TEST PATTERN SERIES"</h2> <hr color: white;>
+	<div class="contenedor"> 
+		 <img class="imagen" src=n1.jpg>
+		<div>
+		<p>“Test pattern” es una serie de obras basadas en la misma idea y presentadas en distintos formatos. A través de estas instalaciones, Ikeda busca explorar las posibilidades perceptivas humanas, transformando diversos tipos de dato-texto, sonido e imagen-en códigos de barra y patrones binarios de 0s y 1s, acompañados de una banda sonora sincronizada. (Forma, s/f) </p>
+		<p>Test pattern [n°1], creado en 2008, fue la primera obra del proyecto. En esta pieza, Ikeda no solo puso a prueba la inmersividad del espectador, sino también el rendimiento de las máquinas, utilizando patrones sonoros y visuales generados en tiempo real. La instalación contó con ocho pantallas rectangulares de ordenador más dieciséis altavoces dispuestos en el suelo. Las pantallas parpadeaban a una velocidad superior a cien fotogramas por segundo en blanco y negro, todo ello expuesto en un espacio oscuro, creando una experiencia sensorial única. (Forma, s/f)</p>
+		</div> 
+		
 	</div>
 
-	<h2>"TEST PATTERN SERIES"</h2>
-	<hr color="white">
-	<div class="contenedor">
-		<img class="imagen" src="n1.jpg">
-		<p>“Test Pattern” es una serie de obras basadas en la misma idea y presentadas en distintos formatos. A través de estas instalaciones, Ikeda busca explorar las posibilidades perceptivas humanas, transformando diversos tipos de datos—texto, sonido e imagen—en códigos de barra y patrones binarios de 0s y 1s, acompañados de una banda sonora sincronizada.</p>
-		<p>Test Pattern [n°1], creado en 2008, fue la primera obra del proyecto. En esta pieza, Ikeda no solo puso a prueba la inmersividad del espectador, sino también el rendimiento de las máquinas, utilizando patrones sonoros y visuales generados en tiempo real. La instalación contó con ocho pantallas rectangulares de ordenador más dieciséis altavoces dispuestos en el suelo. Las pantallas parpadeaban a una velocidad superior a cien fotogramas por segundo en blanco y negro, todo ello expuesto en un espacio oscuro, creando una experiencia sensorial única.</p>
-	</div>
+	        <h2>AUTORES</h2> <hr color: white;>
+	        <p>x</p>
 
-	<h2>AUTORES</h2>
-	<hr color="white">
-	<p>x</p>
+	        <h2>EXPANDED CINEMA</h2> <hr color: white;>
+	        <p>x</p>
+		<h2>VINCULACIÓN</h2> <hr color: white;>
+		<p>x</p>
 
-	<h2>EXPANDED CINEMA</h2>
-	<hr color="white">
-	<p>x</p>
+		<h2>CONCLUSIÓN</h2> <hr color: white:>
+		<p>x</p>
 
-	<h2>VINCULACIÓN</h2>
-	<hr color="white">
-	<p>x</p>
+	        <h2>BIBLIOGRAFÍA</h2> <hr color: white:>
+		<p>x</p>
+	
 
-	<h2>CONCLUSIÓN</h2>
-	<hr color="white">
-	<p>x</p>
 
-	<h2>BIBLIOGRAFÍA</h2>
-	<hr color="white">
-	<p>x</p>
 </body>
-</html>
+</html> 
