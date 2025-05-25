@@ -1,752 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
-    <title>Expanded cinema and Ryoji Ikeda</title>
-  </head>
-  <global>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
-  height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
-  text-decoration: none;
-}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Expanded cinema and Ryoji Ikeda</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+<style>
 
-/* Add these new styles */
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  color: #ffffff;
-}
+ 
+body{ /* body selecciona el cuerpo general y lo pinta */
+			background: black; /* https://www.w3schools.com/colors/colors_names.asp */  
+			font-family: sans-serif; 
+	                margin: 200px;
+			}
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+			header{font-size: 64px;
+			       width: 100%;
+			       margin: 0 auto;/* centrar elementos dentro de este div */
+			       text-align: center;
+			 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+			footer {width: 900px;
+				margin: 0 auto;}
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-  </global>
-  <style>
-  .box {
-  width: 2183px;
-  height: 6274px;
-}
+		.contenedor{
+			width: 900px; 
+			padding: 20px ;
+			margin: 0px;
+			background: black;
+			margin: 0 auto; /* centrar elementos dentro de este div */
+			float: center; 
+			display: flex;
+			justify-content: center;
+		        }
+	
+	        #desarrollo{/* selecciona el id y lo pinta */
+			background: black;
+			}
 
-.box .group {
-  position: fixed;
-  width: 2227px;
-  height: 6274px;
-  top: 0;
-  left: 0;
-}
+		h1{/* selecciona el header o titulo 1 y lo pinta */
+			width: 100%;
+			display: block;
+			padding: 0px;
+			margin: 0px 0px;
+			font-size: 35px;
+			text-align: center;
+			color: white;
+			font-family: 'Orbitron', cursive;
+                        }
+	
+		h2 {/* selecciona el header o titulo 3 y lo pinta */
+			width: 80%;
+			font-size: 25px;
+			color: white;
+			font-family: 'Orbitron', cursive;
+			}
+	
+		p {/* selecciona el parrafo y lo pinta */
+			background: black;
+			width: 100%;
+			padding: 10px;
+			margin-top: 20px;
+			font-size: 18px;
+			color: white;
+			font-family: 'Turret Road', cursive;
+			text-align: justify;
+			float: left;
+			}
+	
+		img{/* selecciona las imagenes y las formatea */
+			width: 300px; 
+			height: 250px;
+			float:right;
+			margin-left: 60px;
+			}
+                .contenedor{ 
+			displey: flex; 
+		}
 
-.box .overlap-group {
-  position: relative;
-  width: 2183px;
-  height: 6274px;
-  background-color: #000000;
-}
-
-.box .text-wrapper {
-  position: absolute;
-  width: 1055px;
-  top: 149px;
-  left: 564px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .overlap {
-  position: absolute;
-  width: 1430px;
-  height: 367px;
-  top: 1106px;
-  left: 370px;
-}
-
-.box .div {
-  position: absolute;
-  width: 1430px;
-  height: 367px;
-  top: 0;
-  left: 0;
-}
-
-.box .text-wrapper-2 {
-  position: absolute;
-  width: 1055px;
-  top: 0;
-  left: 0;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .line {
-  top: 85px;
-  position: absolute;
-  width: 1430px;
-  height: 2px;
-  left: 0;
-}
-
-.box .image {
-  width: 567px;
-  height: 246px;
-  top: 121px;
-  left: 863px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.box .p {
-  position: absolute;
-  width: 833px;
-  top: 129px;
-  left: 0;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .overlap-2 {
-  position: absolute;
-  width: 1430px;
-  height: 129px;
-  top: 1515px;
-  left: 370px;
-}
-
-.box .img {
-  top: 90px;
-  position: absolute;
-  width: 1430px;
-  height: 2px;
-  left: 0;
-}
-
-.box .overlap-3 {
-  position: absolute;
-  width: 1430px;
-  height: 129px;
-  top: 2955px;
-  left: 366px;
-}
-
-.box .text-wrapper-3 {
-  position: absolute;
-  width: 1055px;
-  top: 0;
-  left: 4px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .line-2 {
-  top: 94px;
-  position: absolute;
-  width: 1430px;
-  height: 2px;
-  left: 0;
-}
-
-.box .overlap-4 {
-  position: absolute;
-  width: 1430px;
-  height: 129px;
-  top: 3591px;
-  left: 370px;
-}
-
-.box .line-3 {
-  top: 96px;
-  position: absolute;
-  width: 1430px;
-  height: 2px;
-  left: 0;
-}
-
-.box .overlap-5 {
-  position: absolute;
-  width: 1430px;
-  height: 129px;
-  top: 3996px;
-  left: 366px;
-}
-
-.box .line-4 {
-  top: 103px;
-  position: absolute;
-  width: 1430px;
-  height: 2px;
-  left: 0;
-}
-
-.box .overlap-6 {
-  position: absolute;
-  width: 1430px;
-  height: 129px;
-  top: 5302px;
-  left: 366px;
-}
-
-.box .image-2 {
-  width: 1256px;
-  height: 704px;
-  top: 340px;
-  left: 464px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.box .overlap-7 {
-  position: absolute;
-  width: 1430px;
-  height: 532px;
-  top: 1644px;
-  left: 370px;
-}
-
-.box .overlap-8 {
-  position: absolute;
-  width: 1430px;
-  height: 532px;
-  top: 0;
-  left: 0;
-}
-
-.box .text-wrapper-4 {
-  position: absolute;
-  width: 1430px;
-  top: 0;
-  left: 0;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .image-3 {
-  width: 619px;
-  height: 413px;
-  top: 119px;
-  left: 0;
-  position: absolute;
-  object-fit: cover;
-}
-
-.box .text-wrapper-5 {
-  width: 693px;
-  top: 211px;
-  left: 733px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  font-size: 20px;
-  position: absolute;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-6 {
-  position: absolute;
-  width: 1430px;
-  top: 2238px;
-  left: 370px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-7 {
-  position: absolute;
-  width: 1430px;
-  top: 2729px;
-  left: 366px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-8 {
-  position: absolute;
-  width: 1430px;
-  top: 2812px;
-  left: 366px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-9 {
-  position: absolute;
-  width: 1430px;
-  top: 4397px;
-  left: 366px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-10 {
-  position: absolute;
-  width: 1430px;
-  top: 3738px;
-  left: 370px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-11 {
-  position: absolute;
-  width: 1430px;
-  top: 4143px;
-  left: 370px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-12 {
-  position: absolute;
-  width: 1430px;
-  top: 5048px;
-  left: 366px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-13 {
-  position: absolute;
-  width: 1430px;
-  top: 5454px;
-  left: 370px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-14 {
-  width: 175px;
-  top: 2630px;
-  left: 482px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  font-size: 20px;
-  position: absolute;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-15 {
-  width: 175px;
-  top: 2630px;
-  left: 1015px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  font-size: 20px;
-  position: absolute;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .text-wrapper-16 {
-  position: absolute;
-  width: 266px;
-  top: 2630px;
-  left: 1463px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .fue-un-influyente {
-  position: absolute;
-  width: 781px;
-  top: 3174px;
-  left: 1015px;
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .element {
-  position: absolute;
-  width: 400px;
-  height: 225px;
-  top: 2365px;
-  left: 370px;
-  object-fit: cover;
-}
-
-.box .element-2 {
-  position: absolute;
-  width: 400px;
-  height: 225px;
-  top: 2365px;
-  left: 883px;
-  object-fit: cover;
-}
-
-.box .element-3 {
-  position: absolute;
-  width: 400px;
-  height: 225px;
-  top: 2365px;
-  left: 1396px;
-  object-fit: cover;
-}
-
-.box .image-4 {
-  width: 567px;
-  height: 377px;
-  top: 3124px;
-  left: 366px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.box .image-5 {
-  width: 643px;
-  height: 427px;
-  top: 4531px;
-  left: 366px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.box .image-6 {
-  width: 643px;
-  height: 427px;
-  top: 4531px;
-  left: 1153px;
-  position: absolute;
-  object-fit: cover;
-}
-/* Original CSS code */
-
-/* Add these new styles */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-}
-
-.box {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.group {
-  position: relative;
-  width: 100%;
-  max-width: 2227px;
-  margin: 0 auto;
-}
-
-.overlap-group {
-  position: relative;
-  width: 100%;
-  max-width: 2183px;
-  margin: 0 auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .text-wrapper,
-  .text-wrapper-2,
-  .text-wrapper-3 {
-    font-size: 36px;
-  }
-
-  .p,
-  .text-wrapper-4,
-  .text-wrapper-5,
-  .text-wrapper-6,
-  .text-wrapper-7,
-  .text-wrapper-8,
-  .text-wrapper-9,
-  .text-wrapper-10,
-  .text-wrapper-11,
-  .text-wrapper-12,
-  .text-wrapper-13,
-  .fue-un-influyente {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-wrapper,
-  .text-wrapper-2,
-  .text-wrapper-3 {
-    font-size: 24px;
-  }
-
-  .p,
-  .text-wrapper-4,
-  .text-wrapper-5,
-  .text-wrapper-6,
-  .text-wrapper-7,
-  .text-wrapper-8,
-  .text-wrapper-9,
-  .text-wrapper-10,
-  .text-wrapper-11,
-  .text-wrapper-12,
-  .text-wrapper-13,
-  .fue-un-influyente {
-    font-size: 14px;
-  }
-}
+		iframe{
+			text-align: center;
+		}
+			
 </style>
-  <body>
-    <main class="box">
-      <article class="group">
-        <section class="overlap-group">
-          <h1 class="text-wrapper">Expanded cinema and Ryoji Ikeda</h1>
-          <section class="overlap">
-            <div class="div">
-              <h2 class="text-wrapper-2">Ryoji Ikeda</h2>
-              <hr class="line" />
-              <img class="image" src="img/image-31.png" alt="Ryoji Ikeda artwork" />
-            </div>
-            <p class="p">
-              Artista visual y compositor japonés cuyo trabajo se centra en las características esenciales del sonida y
-              la luz como elementos visuales. Su enfoque fusiona lo universal y transparente ded las matemáticas,
-              utilizadas como estética, dando lugar a instalaciones inmersivas y actuaciones en directo. fusionado con
-              lo universal y trasparente de la matematica utilizado como estetica.
-            </p>
-          </section>
-          <section class="overlap-2">
-            <h2 class="text-wrapper-2">"Test Pattern Series"</h2>
-            <hr class="img" />
-          </section>
-          <section class="overlap-3">
-            <h2 class="text-wrapper-3">Peter Weibel</h2>
-            <hr class="line-2" />
-          </section>
-          <section class="overlap-4">
-            <h2 class="text-wrapper-2">Expanded cinema</h2>
-            <hr class="line-3" />
-          </section>
-          <section class="overlap-5">
-            <h2 class="text-wrapper-2">Vinculación</h2>
-            <hr class="line-4" />
-          </section>
-          <section class="overlap-6">
-            <h2 class="text-wrapper-3">Conclusión</h2>
-            <hr class="line-3" />
-          </section>
-          <img class="image-2" src="img/image-30.png" alt="Expanded cinema concept" />
-          <section class="overlap-7">
-            <div class="overlap-8">
-              <p class="text-wrapper-4">
-                "Test pattern" es una serie de obras basadas en la misma idea y presentadas en distintos formatos. A
-                través de estas instalaciones, Ikeda busca explorar las posibilidades perceptivas humanas, transformando
-                diversos tipos de dato-texto, sonido e imagen-en códigos de barra y patrones binarios de 0s y 1s,
-                acompañados de una banda sonora sincronizada. (Forma, s/f)
-              </p>
-              <img class="image-3" src="img/image-32.png" alt="Test pattern installation" />
-            </div>
-            <p class="text-wrapper-5">
-              Test pattern [n°1], creado en 2008, fue la primera obra del proyecto. En esta pieza, Ikeda no solo puso a
-              prueba la inmersividad del espectador, sino también el rendimiento de las máquinas, utilizando patrones
-              sonoros y visuales generados en tiempo real. La instalación contó con ocho pantallas rectangulares de
-              ordenador más dieciséis altavoces dispuestos en el suelo. Las pantallas parpadeaban a una velocidad
-              superior a cien fotogramas por segundo en blanco y negro, todo ello expuesto en un espacio oscuro, creando
-              una experiencia sensorial única. (Forma, s/f)
-            </p>
-          </section>
-          <p class="text-wrapper-6">
-            Ikeda continuó realizando estas instalaciones hasta 2022 con test pattern [n° 14], modificando la cantidad
-            de pantallas de altavoces, el lugar, la banda sonora y otros aspectos, sin dejar de lado la inmersividad del
-            espectador
-          </p>
-          <p class="text-wrapper-7">
-            El enfoque en la transformación de datos en experiencias inmersivas refleja la interacción entre arte y
-            tecnología y cómo el arte se adapta a lo digital para convertirse en una manifestación estética.
-          </p>
-          <p class="text-wrapper-8">
-            Además, en un mundo donde el procesamiento datos y la inteligencia artificial serán cada vez más
-            omnipresentes en nuestra vida, este tipo de arte nos hace reflexionar sobre la estética de la información,
-            la evolución de la sociedad en un mundo cada vez más digitalizado y las interrogantes sobre el futuro de la
-            interacción entre humanos y máquinas.
-          </p>
-          <p class="text-wrapper-9">
-            "The term visual music is a very broad term to describe the combination of image, sound and music,
-            especially in an art-environment, in the form of film installations. But visual music as a concept can take
-            many forms. I'd like to think it stems from expanded cinema"Es parte de lo que podemos considerar como
-            Expanded cinema, por ello ambos, el texto como la obra, se encuentran estrechamente vinculadas.
-          </p>
-          <p class="text-wrapper-10">
-            En su artículo Expanded Cinema, Video and Virtual Environments, Peter Weibel analiza cómo, desde los años
-            60, el cine experimental rompió con las estructuras clásicas para convertirse en una experiencia
-            multisensorial, interactiva e inmersiva. Incorporando tecnologías como el video, la proyección múltiple, la
-            realidad virtual y la inteligencia artificial, estas prácticas transformaron la experiencia audiovisual de
-            forma radical. Weibel sostiene que esta expansión no es solo artística, sino también cultural y tecnológica.
-            Esta transformación refleja los cambios sociales actuales, marcados por la digitalización y la fusión entre
-            humanos y tecnología. Así, el cine expandido se convierte en un laboratorio cultural que anticipa futuros
-            posibles, cuestionando cómo los medios afectan nuestra percepción, subjetividad y participación social. Su
-            análisis es clave para entender el papel del arte y la tecnología en la configuración de nuevas realidades
-            culturales. https://www.mariamghani.com/docs/weibel.pdf
-          </p>
-          <p class="text-wrapper-11">
-            La vinculación entre el análisis teórico de Expanded Cinema de Peter Weibel y la obra Test Pattern de Ryoji
-            Ikeda permite demostrar cómo el arte, diseño y tecnología se entrelazan para transformar nuestra forma de
-            percibir, experimentar, y participar en lo audiovisual, configurando nuevas formas de producción cultural y
-            conocimiento. En ambos casos se evidencia una transformación del dispositivo cinematográfico tradicional:
-            Weibel explica cómo durante los años 60 el cine experimental desmanteló el aparato clásico de cine para
-            expandirlo y resignificarlo. Por otro lado, Ryoji Ikeda en obras como test pattern o data.scan no solo
-            trabaja con imágenes y sonido digitalizado, sino que convierte datos y algoritmos en materia estética. De la
-            misma manera que los artistas mencionados por Weibel, Ikeda reestructura el aparato audiovisual al trabajar
-            con tecnologías contemporáneas y transformandolas en experiencias sensoriales que trascienden la narrativa
-            tradicional, haciendo música visual, que como nos comparte Midnight Science Fiction Feature (2013, párr. 1):
-          </p>
-          <p class="text-wrapper-12">
-            La integración del espectador y su cambio en cuanto a la percepción de la realidad es un aspecto fascinante
-            que se expresa y explica en ambos, en el caso de Expanded Cinema nos comenta como en el comienzo, para poder
-            conseguir esta sensación de inmersión y participación dentro de la obra se utilizaban diversas pantallas,
-            creando un espacio completamente nuevo, por otro lado en Test pattern nos encontramos con una única pantalla
-            que de forma fluida provoca una inmersión total a través de los estímulos visuales y sonoros. Mientras el
-            Expanded Cinema físico y estructural de los años 60 buscaba envolver al espectador multiplicando superficies
-            y puntos de vista, utilizando la música como un acompañamiento que ayudaría a influir en la experiencia,
-            Ikeda logra algo similar mediante la concentración extrema de información codificada, acompañada de
-            frecuencias sonoras. La participación del espectador ya no se da al desplazarse dentro del espacio o el
-            mirar hacia distintas direcciones, sino por la actividad sensorial directa, casi fisiológica, frente a la
-            exposición de datos
-          </p>
-          <p class="text-wrapper-13">
-            Debido a todo lo analizado con anterioridad podemos llegar a la conclusión de que ambos, tanto el texto de
-            Weibel como la obra de Ikeda convergen una visión profundamente transformadora de la relación entre el
-            sujeto, la tecnología y la representación audiovisual. Ambos con su modernidad propia representan como los
-            audiovisuales actuales construyen nuevas formas de percepción, inmersión y conocimiento. Desde el uso físico
-            y espacial de múltiples pantallas en el expanded cinema hasta la condensación extrema de datos en una
-            superficie como lo hace Ikeda en test pattern, lo que surge es una transformación absoluta del rol que ocupa
-            el espectador, convirtiéndose este en un cuerpo implicado, dejando atrás el papel de observador pasivo. A su
-            vez van transformando ambientes físicos en verdaderos espacios de virtualidad, tal como comparte Expanded
-            cinema "Transforming physical space into the virtual interactive space of the WorldWide Web" (Weibel, 2002,
-            p.133). Es algo que ambos comparten, aunque desde épocas y lenguajes distintos, la voluntad de
-            desestabilizar los límites entre lo físico y lo virtual, entre lo real y representado. Esta convergencia no
-            solo reinventa la experiencia estética, sino que plantea nuevas formas de producción de conocimiento, dónde
-            la percepción sensorial, la abstracción de datos y el paisaje mediático se entrelazan.
-          </p>
-          <h3 class="text-wrapper-14">Test Pattern [N°3]</h3>
-          <h3 class="text-wrapper-15">Test Pattern [N°5]</h3>
-          <h3 class="text-wrapper-16">Test Pattern [Times Square]</h3>
-          <p class="fue-un-influyente">
-            Fue un influyente artista, teórico y curador austriaco, reconocido por su papel clave en el desarrollo del
-            arte mediático, el cine experimental y la teoría de los medios. Su enfoque interdisciplinario integró arte,
-            ciencia y tecnología, y estuvo centrado en cuestionar los dispositivos tradicionales de representación
-            visual. A partir de los años 60, participó activamente en movimientos como el cine expandido y el videoarte,
-            impulsando prácticas inmersivas e interactivas que transformaron el rol del espectador. Fue director del ZKM
-            (Zentrum für Kunst und Medien Karlsruhe), donde promovió la investigación sobre arte digital y entornos
-            virtuales. Entre sus textos más destacados se encuentra "Expanded Cinema, Video and Virtual Environments",
-            en el cual analiza la evolución de los lenguajes audiovisuales y su impacto en la cultura visual
-            contemporánea. https://zkm.de/en/person/peter-weibel
-          </p>
-          <img class="element" src="img/1-1.png" alt="Test Pattern [N°3]" />
-          <img class="element-2" src="img/2-1.png" alt="Test Pattern [N°5]" />
-          <img class="element-3" src="img/3-1.png" alt="Test Pattern [Times Square]" />
-          <img class="image-4" src="img/image-33.png" alt="Peter Weibel" />
-          <img class="image-5" src="img/image.png" alt="Expanded Cinema concept 1" />
-          <img class="image-6" src="img/image-34.png" alt="Expanded Cinema concept 2" />
-        </section>
-      </article>
+
+</head>
+
+<body>
+	<header><h1>EXPANDED CINEMA AND RYOJI IKEDA</h1></header>
+	<div class="contenedor">        
+	<<iframe width="840" height="472.5" src="https://www.youtube.com/embed/MPLhZOox_do?si=DQu4D9qFTRumkr8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
+	
+		<h2>RYOJI IKEDA</h2> <hr color: white;>
+	<div class="contenedor"> 
+		<div>
+		<p>Artista visual y compositor japonés cuyo trabajo se centra en las características esenciales del sonido y la luz como elementos visuales. Su enfoque fusiona lo universal y transparente de las matemáticas, utilizadas como estética, dando lugar a instalaciones inmersivas y actuaciones en directo. (Forma, s/f)</p>
+		</div>
+	     <img class="imagen" src=ryoji-ikeda.jpg> 
+	</div>
+
+		<h2>"TEST PATTERN SERIES"</h2> <hr color: white;>
+	<p>“Test pattern” es una serie de obras basadas en la misma idea y presentadas en distintos formatos. A través de estas instalaciones, Ikeda busca explorar las posibilidades perceptivas humanas, transformando diversos tipos de dato -texto, sonido e imagen- en códigos de barra y patrones binarios de 0s y 1s, acompañados de una banda sonora sincronizada. (Forma, s/f) </p>
+	<div class="contenedor"> 
+		 <img class="imagen" src=n1.jpg>
+		<div>
+		<p>Test pattern [n°1], creado en 2008, fue la primera obra del proyecto. En esta pieza, Ikeda no solo puso a prueba la inmersividad del espectador, sino también el rendimiento de las máquinas, utilizando patrones sonoros y visuales generados en tiempo real. La instalación contó con ocho pantallas rectangulares de ordenador más dieciséis altavoces dispuestos en el suelo. Las pantallas parpadeaban a una velocidad superior a cien fotogramas por segundo en blanco y negro, todo ello expuesto en un espacio oscuro, creando una experiencia sensorial única. (Forma, s/f)</p>
+		</div> 
+		
+	</div>
+	<p>Ikeda continuó realizando estas instalaciones hasta 2022 con test pattern [n° 14], modificando la cantidad de pantallas, de altavoces, el lugar, la banda sonora y otros aspectos, sin dejar de lado la inmersividad del espectador.</p>
+	<img src=1.jpg margin-right: 60px>
+        <p>El enfoque en la transformación de datos en experiencias inmersivas refleja la interacción entre arte y tecnología y cómo el arte se adapta a lo digital para convertirse en una manifestación estética.</p>
+	<p>Además, en un mundo donde el procesamiento datos y la inteligencia artificial serán cada vez más omnipresentes en nuestra vida, este tipo de arte nos hace reflexionar sobre la estética de la información, la evolución de la sociedad en un mundo cada vez más digitalizado y las interrogantes sobre el futuro de la interacción entre humanos y máquinas.</p>
+	        <h2>PETER WEIBEL</h2> <hr color: white;>
+	        <p>Peter Weibel (1944-2023) fue un influyente artista, teórico y curador austriaco, reconocido por su papel clave en el desarrollo del arte mediático, el cine experimental y la teoría de los medios. Su enfoque interdisciplinario integró arte, ciencia y tecnología, y estuvo centrado en cuestionar los dispositivos tradicionales de representación visual. A partir de los años 60, participó activamente en movimientos como el cine expandido y el videoarte, impulsando prácticas inmersivas e interactivas que transformaron el rol del espectador. Fue director del ZKM (Zentrum für Kunst und Medien Karlsruhe), donde promovió la investigación sobre arte digital y entornos virtuales.Entre sus textos más destacados se encuentra "Expanded Cinema, Video and Virtual Environments", en el cual analiza la evolución de los lenguajes audiovisuales y su impacto en la cultura visual contemporánea. https://zkm.de/en/person/peter-weibel</p>
+
+	        <h2>EXPANDED CINEMA</h2> <hr color: white;>
+	        <p>En su artículo Expanded Cinema, Video and Virtual Environments, Peter Weibel analiza cómo, desde los años 60, el cine experimental rompió con las estructuras clásicas para convertirse en una experiencia multisensorial, interactiva e inmersiva. Incorporando tecnologías como el video, la proyección múltiple, la realidad virtual y la inteligencia artificial, estas prácticas transformaron la experiencia audiovisual de forma radical. Weibel sostiene que esta expansión no es solo artística, sino también cultural y tecnológica. Esta transformación refleja los cambios sociales actuales, marcados por la digitalización y la fusión entre humanos y tecnología. Así, el cine expandido se convierte en un laboratorio cultural que anticipa futuros posibles, cuestionando cómo los medios afectan nuestra percepción, subjetividad y participación social. Su análisis es clave para entender el papel del arte y la tecnología en la configuración de nuevas realidades culturales. https://www.mariamghani.com/docs/weibel.pdf </p>
+		
+	   
+		<h2>VINCULACIÓN</h2> <hr color: white;>
+		<p>La vinculación entre el análisis teórico de Expanded Cinema de Peter Weibel y la obra Test Pattern de Ryoji Ikeda permite demostrar cómo el arte, diseño y tecnología se entrelazan para transformar nuestra forma de percibir, experimentar, y participar en lo audiovisual, configurando nuevas formas de producción cultural y conocimiento. En ambos casos se evidencia una transformación del dispositivo cinematográfico tradicional: Weibel explica cómo durante los años 60 el cine experimental desmanteló el aparato clásico de cine para expandirlo y resignificarlo. Por otro lado, Ryoji Ikeda en obras como test pattern o data.scan no solo trabaja con imágenes y sonido digitalizado, sino que convierte datos y algoritmos en materia estética. De la misma manera que los artistas mencionados por Weibel, Ikeda reestructura el aparato audiovisual al trabajar con tecnologías contemporáneas y transformandolas en experiencias sensoriales que trascienden la narrativa tradicional, haciendo música visual, que como nos comparte Midnight Science Fiction Feature (2013, párr. 1):</p>
+                <P>“The term visual music is a very broad term to describe the combination of image, sound and music, especially in an art-environment, in the form of film installations. But visual music as a concept can take many forms. I’d like to think it stems from expanded cinema”Es parte de lo que podemos considerar como Expanded cinema, por ello ambos, el texto como la obra, se encuentran estrechamente vinculadas. </P>
+		<P>La integración del espectador y su cambio en cuanto a la percepción de la realidad es un aspecto fascinante que se expresa y explica en ambos, en el caso de Expanded Cinema nos comenta como en el comienzo, para poder conseguir esta sensación de inmersión y participación dentro de la obra se utilizaban diversas pantallas, creando un espacio completamente nuevo, por otro lado en Test pattern nos encontramos con una única pantalla que de forma fluida provoca una inmersión total a través de los estímulos visuales y sonoros. Mientras el Expanded Cinema físico y estructural de los años 60 buscaba envolver al espectador multiplicando superficies y puntos de vista, utilizando la música como un acompañamiento que ayudaría a influir en la experiencia, Ikeda logra algo similar mediante la concentración extrema de información codificada, acompañada de frecuencias sonoras. La participación del espectador ya no se da al desplazarse dentro del espacio o el mirar hacia distintas direcciones, sino por la actividad sensorial directa, casi fisiológica, frente a la exposición de datos. </P>
+	        <h2>CONCLUSIÓN</h2> <hr color: white:>
+		<p>Debido a todo lo analizado con anterioridad podemos llegar a la conclusión de que ambos, tanto el texto de Weibel como la obra de Ikeda convergen una visión profundamente transformadora de la relación entre el sujeto, la tecnología y la representación audiovisual. Ambos con su modernidad propia representan como los audiovisuales actuales construyen nuevas formas de percepción, inmersión y conocimiento. Desde el uso físico y espacial de múltiples pantallas en el expanded cinema hasta la condensación extrema de datos en una superficie como lo hace Ikeda en test pattern, lo que surge es una transformación absoluta del rol que ocupa el espectador, convirtiéndose este en un cuerpo implicado, dejando atrás el papel de observador pasivo. A su vez van transformando ambientes físicos en verdaderos espacios de virtualidad, tal como comparte Expanded cinema “Transforming physical space into the virtual interactive space of the WorldWide Web” (Weibel, 2002, p.133). Es algo que ambos comparten, aunque desde épocas y lenguajes distintos, la voluntad de desestabilizar los límites entre lo físico y lo virtual, entre lo real y representado. Esta convergencia no solo reinventa la experiencia estética, sino que plantea nuevas formas de producción de conocimiento, dónde la percepción sensorial, la abstracción de datos y el paisaje mediático se entrelazan. </p>
+
+	        <h2>BIBLIOGRAFÍA</h2> <hr color: white:>
+		<p>x</p>
+	
+
+
+</body>
+</html> 
     </main>
   </body>
 </html>
